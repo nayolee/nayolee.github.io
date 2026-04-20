@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayoung Lee - Academic Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            padding: 1.5rem 10%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #444;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+            gap: 60px;
+        }
+
+        .sidebar {
+            flex: 0 0 250px;
+        }
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #f0f0f0;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .profile-name {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 0 0 0.5rem 0;
+        }
+        .profile-title {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        .contact-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #333;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .cv-link-disabled {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #999;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-item {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Nayoung Lee</a>
+        <ul class="navbar-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Research</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <img src="https://via.placeholder.com/220?text=Photo" alt="Profile" class="profile-img">
+            
+            <h2 class="profile-name">Nayoung Lee</h2>
+            <p class="profile-title">Ph.D. Candidate in Economics<br>Indiana University</p>
+            
+            <ul class="contact-info">
+                <li class="contact-item">📍 Bloomington, IN, US</li>
+                <li class="contact-item">🏫 Indiana University</li>
+                <li class="contact-item">📧 <a href="mailto:nayolee@iu.edu">nayolee@iu.edu</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="section-title">Home</h1>
+            <p class="intro-text">
+                Welcome to my webpage! <br><br>
+                I am a researcher specializing in macroeconomics. 
+                My work mainly focuses on fiscal policy and consumer expectations.
+            </p>
+            
+            <span class="cv-link-disabled">Curriculum Vitae (Available soon)</span>
+        </main>
+    </div>
+
+</body>
+</html>
