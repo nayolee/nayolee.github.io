@@ -161,6 +161,9 @@
 }
 
         @media (max-width: 48rem) {
+ 	    .profile-img {
+    		display: none;
+	    }
             .container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -243,6 +246,7 @@
         <ul class="navbar-nav">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="research.html" class="nav-link active">Research</a></li>
+	    <li><a href="cv.html" class="nav-link">CV</a></li>
         </ul>
     </nav>
 
@@ -282,7 +286,8 @@
 
         <article class="paper-item">
             <h3 class="paper-title">Prior Selection for VAR Forecasts</h3>
-            <p class="paper-status"> Draft coming soon</p>
+            <a href="Prior_Selection_for_VAR_Forecasts.pdf" target="_blank" rel="noopener" class="cv-link">Draft</a>
+            </p>
             <p class="paper-description">
                 I provide a systematic framework for enhancing prior selection in Bayesian VAR 			forecasts, overcoming limitations of the popular method by Giannone et al.(2015). This paper suggests employing Relative Entropy Prior Sensitivity, which alleviates these limitations and improves point forecast accuracy. These improvements are attributed to the shape of the likelihood.
             </p>
