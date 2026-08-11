@@ -3,302 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayoung Lee</title>
-    
+    <title>Research | Nayoung Lee</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        :root {
-            --layout-max-width: 68.75rem;
-            --nav-side-padding: 3.5%;
-            --content-side-padding: 5%;
-            --profile-width: 11.25rem;
-            --icon-width: 1.5rem;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
-
-        .navbar {
-            padding: 1.7rem var(--nav-side-padding) 1rem;
-            display: flex;
-            align-items: center;
-            border-bottom: 0.0625rem solid #eee;
-        }
-
-        .navbar-brand {
-            font-size: 1.7rem;
-            font-weight: 700;
-            color: #444;
-            text-decoration: none;
-            margin-left: 1.25rem;
-            margin-right: 6.625rem;
-        }
-
-        .navbar-nav {
-            list-style: none;
-            display: flex;
-            gap: 1.5625rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #666;
-            font-weight: 500;
-            font-size: 1.4rem;
-        }
-
-        .container {
-            display: flex;
-            align-items: flex-start;
-            max-width: var(--layout-max-width);
-            padding: 2.7rem var(--content-side-padding) 3rem;
-            gap: clamp(2.4rem, 7.7vw, 5.8rem);
-
-
-        }
-
-        .sidebar {
-            flex: 0 0 var(--profile-width);
-            text-align: left;
-        }
-
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 9 / 10;
-            border-radius: 0;
-            object-fit: cover;
-            background-color: #f0f0f0;
-            margin: 0 0 1.5rem;
-            display: block;
-        }
-
-        .profile-name {
-            width: 100%;
-            display: block;
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin: 0 0 0.5rem;
-        }
-
-        .profile-title {
-            width: 100%;
-            font-size: 0.92rem;
-            color: #777;
-            margin: 0 0 1.5rem;
-        }
-
-        .contact-info {
-            width: 100%;
-            list-style: none;
-            padding: 0;
-            font-size: 0.92rem;
-            color: #444;
-            margin: 0;
-        }
-
-        .contact-item {
-            margin-bottom: 0.25rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-item i {
-            width: var(--icon-width);
-            margin-right: 0.625rem;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        .contact-item a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .main-content {
-            flex: 1;
-            min-width: 0;
-            padding-top: 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            line-height: 1;
-            margin: -0.25rem 0 1.5rem;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cv-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #333;
-  text-decoration: none;
-  font-weight: 700;
-  border-bottom: 1px solid #999;
-}
-.cv-link:hover {
-  border-bottom-color: #333;
-}
-
+        :root { --layout-max-width: 68.75rem; --nav-side-padding: 3.5%; --content-side-padding: 5%; --profile-width: 15.5rem; }
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #fff; }
+        .navbar { padding: 1.7rem var(--nav-side-padding) 1rem; display: flex; align-items: center; border-bottom: 0.0625rem solid #eee; }
+        .navbar-brand { font-size: 1.7rem; font-weight: 700; color: #444; text-decoration: none; margin-left: 1.25rem; margin-right: 6.625rem; }
+        .navbar-nav { list-style: none; display: flex; gap: 1.5625rem; margin: 0; padding: 0; }
+        .nav-link { text-decoration: none; color: #666; font-weight: 500; font-size: 1.4rem; }
+        .nav-link.active { color: #222; }
+        .container { display: flex; align-items: flex-start; max-width: var(--layout-max-width); padding: 2.7rem var(--content-side-padding) 3rem; gap: clamp(2.4rem, 7.7vw, 5.8rem); }
+        .sidebar { flex: 0 0 var(--profile-width); text-align: left; }
+        .profile-img { width: 100%; aspect-ratio: 9 / 10; border-radius: 0; object-fit: cover; background-color: #f0f0f0; margin: 0; display: block; }
+        .main-content { flex: 1; min-width: 0; padding-top: 0; }
+        .research-page { max-width: 760px; }
+        .research-section { margin-top: -0.4rem; }
+        .research-heading { font-size: 1.6rem; font-weight: 700; margin: 0 0 1.4rem; color: #444; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.5rem; }
+        .paper-item { margin-bottom: 3.5rem; }
+        .paper-title { font-size: 1.18rem; line-height: 1.3; margin: 0 0 0.4rem; color: #222; }
+        .paper-status { font-size: 0.95rem; color: #777; margin: 0 0 0.7rem; font-style: italic; }
+        .paper-description { font-size: 1rem; line-height: 1.5; margin: 0; color: #444; }
+        .paper-link { display: inline-block; margin: 0 0 0.8rem; color: #333; text-decoration: none; font-weight: 700; border-bottom: 1px solid #999; }
+        .paper-link:hover { border-bottom-color: #333; }
         @media (max-width: 48rem) {
- 	    .profile-img {
-    		display: none;
-	    }
-            .container {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-                gap: 2rem;
-            }
-
-            .sidebar {
-                width: min(100%, 16rem);
-                flex-basis: auto;
-            }
-
-	    .sidebar {
-    	    display: none;
-	    }
-            .navbar {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .navbar-brand {
-                margin-left: 0;
-                margin-right: 2rem;
-            }
-
-            .contact-item {
-                justify-content: flex-start;
-            }
+            .container { flex-direction: column; align-items: flex-start; text-align: left; gap: 2rem; }
+            .sidebar { width: min(100%, 16rem); flex-basis: auto; }
+            .navbar { padding-left: 5%; padding-right: 5%; }
+            .navbar-brand { margin-left: 0; margin-right: 2rem; }
         }
-
-
-
-.research-page {
-    max-width: 760px;
-}
-
-.research-section {
-    margin-top: -10px;
-}
-
-.research-heading {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin: 0 0 1.4rem 0;
-    color: #444;
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 0.5rem;
-}
-
-.paper-item {
-    margin-bottom: 3.5rem;
-}
-
-.paper-title {
-    font-size: 1.18rem;
-    line-height: 1.3;
-    margin: 0 0 0.1rem 0;
-    color: #222;
-}
-
-.paper-status {
-    font-size: 0.95rem;
-    color: #777;
-    margin: 0 0 0.7rem 0;
-    font-style: italic;
-}
-
-.paper-description {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
-    color: #444;
-}
-
-
-	
     </style>
 </head>
 <body>
-
     <nav class="navbar">
-        <a href="#" class="navbar-brand">Nayoung Lee</a>
+        <a href="index.html" class="navbar-brand">Nayoung Lee</a>
         <ul class="navbar-nav">
             <li><a href="index.html" class="nav-link">Home</a></li>
-	    <li><a href="cv.html" class="nav-link">CV</a></li>
-            <li><a href="research.html" class="nav-link active">Research</a></li>
+            <li><a href="cv-updated.html" class="nav-link">CV</a></li>
+            <li><a href="research-updated.html" class="nav-link active" aria-current="page">Research</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <aside class="sidebar">
             <img src="https://via.placeholder.com/180?text=Photo" alt="Profile" class="profile-img">
-
-            <p class="profile-title">Ph.D. Candidate in Economics<br>Indiana University</p>
-            
-            <ul class="contact-info">
-                <li class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i> Bloomington, IN, US
-                </li>
-                <li class="contact-item">
-                    <i class="fa-solid fa-building-columns"></i> Indiana University
-                </li>
-                <li class="contact-item">
-                    <i class="fa-solid fa-envelope"></i> <a href="mailto:nayolee@iu.edu">Email</a>
-                </li>
-            </ul>
         </aside>
-
-
-	<main class="main-content research-page">
-   
-
-    	<section class="research-section">
-        <h2 class="research-heading">Working Paper</h2>
-
-        <article class="paper-item">
-            <h3 class="paper-title">Fiscal Beliefs and the Effectiveness of Fiscal 			Consolidation</h3>
-            <p class="paper-status"> Draft coming soon</p>
-            <p class="paper-description">
-                This paper studies how households' beliefs about fiscal policy shape the 		macroeconomic effects of fiscal consolidation.
-            </p>
-        </article>
-
-        <article class="paper-item">
-            <h3 class="paper-title">Prior Selection for VAR Forecasts</h3>
-            <a href="Prior_Selection_for_VAR_Forecasts.pdf" target="_blank" rel="noopener" class="cv-link">Draft</a>
-            </p>
-            <p class="paper-description">
-                I provide a systematic framework for enhancing prior selection in Bayesian VAR 			forecasts, overcoming limitations of the popular method by Giannone et al.(2015). This paper suggests employing Relative Entropy Prior Sensitivity, which alleviates these limitations and improves point forecast accuracy. These improvements are attributed to the shape of the likelihood.
-            </p>
-        </article>
-    	</section>
-	</main>
-
+        <main class="main-content research-page">
+            <section class="research-section">
+                <h1 class="research-heading">Working Paper</h1>
+                <article class="paper-item">
+                    <h2 class="paper-title">Fiscal Beliefs and the Effectiveness of Fiscal Consolidation</h2>
+                    <p class="paper-status">Draft coming soon</p>
+                    <p class="paper-description">This paper studies how households' beliefs about fiscal policy shape the macroeconomic effects of fiscal consolidation.</p>
+                </article>
+                <article class="paper-item">
+                    <h2 class="paper-title">Prior Selection for VAR Forecasts</h2>
+                    <a href="Prior_Selection_for_VAR_Forecasts.pdf" target="_blank" rel="noopener" class="paper-link">Draft</a>
+                    <p class="paper-description">I provide a systematic framework for enhancing prior selection in Bayesian VAR forecasts, overcoming limitations of the popular method by Giannone et al. (2015). This paper suggests employing Relative Entropy Prior Sensitivity, which alleviates these limitations and improves point forecast accuracy. These improvements are attributed to the shape of the likelihood.</p>
+                </article>
+            </section>
+        </main>
     </div>
-
 </body>
 </html>
