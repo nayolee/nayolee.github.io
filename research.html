@@ -1,68 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Nayoung Lee</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root { --layout-max-width: 68.75rem; --nav-side-padding: 3.5%; --content-side-padding: 5%; --profile-width: 15.5rem; }
-        * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #fff; }
-        .navbar { padding: 1.7rem var(--nav-side-padding) 1rem; display: flex; align-items: center; border-bottom: 0.0625rem solid #eee; }
-        .navbar-brand { font-size: 1.7rem; font-weight: 700; color: #444; text-decoration: none; margin-left: 1.25rem; margin-right: 6.625rem; }
-        .navbar-nav { list-style: none; display: flex; gap: 1.5625rem; margin: 0; padding: 0; }
-        .nav-link { text-decoration: none; color: #666; font-weight: 500; font-size: 1.4rem; }
-        .nav-link.active { color: #222; }
-        .container { display: flex; align-items: flex-start; max-width: var(--layout-max-width); padding: 2.7rem var(--content-side-padding) 3rem; gap: clamp(2.4rem, 7.7vw, 5.8rem); }
-        .sidebar { flex: 0 0 var(--profile-width); text-align: left; }
-        .profile-img { width: 100%; aspect-ratio: 9 / 10; border-radius: 0; object-fit: cover; background-color: #f0f0f0; margin: 0; display: block; }
-        .main-content { flex: 1; min-width: 0; padding-top: 0; }
-        .research-page { max-width: 760px; }
-        .research-section { margin-top: -0.4rem; }
-        .research-heading { font-size: 1.6rem; font-weight: 700; margin: 0 0 1.4rem; color: #444; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.5rem; }
-        .paper-item { margin-bottom: 3.5rem; }
-        .paper-title { font-size: 1.18rem; line-height: 1.3; margin: 0 0 0.4rem; color: #222; }
-        .paper-status { font-size: 0.95rem; color: #777; margin: 0 0 0.7rem; font-style: italic; }
-        .paper-description { font-size: 1rem; line-height: 1.5; margin: 0; color: #444; }
-        .paper-link { display: inline-block; margin: 0 0 0.8rem; color: #333; text-decoration: none; font-weight: 700; border-bottom: 1px solid #999; }
-        .paper-link:hover { border-bottom-color: #333; }
-        @media (max-width: 48rem) {
-            .container { flex-direction: column; align-items: flex-start; text-align: left; gap: 2rem; }
-            .sidebar { width: min(100%, 16rem); flex-basis: auto; }
-            .navbar { padding-left: 5%; padding-right: 5%; }
-            .navbar-brand { margin-left: 0; margin-right: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | Nayoung Lee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#14263d; --muted:#647084; --line:#e1e5e8; --serif:"Playfair Display",Georgia,serif; --mono:"DM Mono",monospace; --layout-max-width:68.75rem; --profile-width:15.5rem; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:#333; background:#fff; font-family:Arial,sans-serif; line-height:1.6; }
+    .navbar { display:flex; align-items:center; justify-content:space-between; max-width:75rem; margin:0 auto; padding:1.625rem 2.5rem; border-bottom:1px solid var(--line); }
+    .navbar-brand { color:var(--ink); font-family:var(--serif); font-size:1.34rem; font-weight:700; letter-spacing:-.04em; text-decoration:none; }
+    .navbar-nav { display:flex; gap:1.75rem; margin:0; padding:0; list-style:none; }
+    .nav-link { color:var(--muted); font-family:var(--mono); font-size:.73rem; font-weight:500; letter-spacing:.04em; text-decoration:none; text-transform:uppercase; }
+    .nav-link:hover, .nav-link.active { color:var(--ink); }
+    .container { display:flex; align-items:flex-start; max-width:var(--layout-max-width); padding:2.7rem 5% 3rem; gap:clamp(2.4rem,7.7vw,5.8rem); }
+    .sidebar { display:none; flex:0 0 var(--profile-width); }.profile-img { display:block; width:100%; aspect-ratio:9 / 10; object-fit:cover; background:#f0f0f0; }
+    .main-content { flex:1; min-width:0; }.research-page { max-width:760px; }.research-heading { margin:-.4rem 0 1.4rem; padding-bottom:.5rem; color:#444; font-size:1.6rem; font-weight:700; border-bottom:1px solid #e5e5e5; }.paper-item { margin-bottom:3.5rem; }.paper-title { margin:0 0 .4rem; color:#222; font-size:1.18rem; line-height:1.3; }.paper-status { margin:0 0 .7rem; color:#777; font-size:.95rem; font-style:italic; }.paper-description { margin:0; color:#444; font-size:1rem; line-height:1.5; }.paper-link { display:inline-block; margin:0 0 .8rem; color:#333; font-weight:700; text-decoration:none; border-bottom:1px solid #999; }.paper-link:hover { border-bottom-color:#333; }
+    @media (max-width:48rem) { .navbar { padding:1.3125rem 1.375rem; }.navbar-nav { gap:.9375rem; }.nav-link { font-size:.65rem; }.container { flex-direction:column; gap:2rem; padding:2.7rem 5% 3rem; }.sidebar { display:block; width:min(100%,16rem); flex-basis:auto; } }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="navbar-brand">Nayoung Lee</a>
-        <ul class="navbar-nav">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="cv-updated.html" class="nav-link">CV</a></li>
-            <li><a href="research-updated.html" class="nav-link active" aria-current="page">Research</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <aside class="sidebar">
-            <img src="https://via.placeholder.com/180?text=Photo" alt="Profile" class="profile-img">
-        </aside>
-        <main class="main-content research-page">
-            <section class="research-section">
-                <h1 class="research-heading">Working Paper</h1>
-                <article class="paper-item">
-                    <h2 class="paper-title">Fiscal Beliefs and the Effectiveness of Fiscal Consolidation</h2>
-                    <p class="paper-status">Draft coming soon</p>
-                    <p class="paper-description">This paper studies how households' beliefs about fiscal policy shape the macroeconomic effects of fiscal consolidation.</p>
-                </article>
-                <article class="paper-item">
-                    <h2 class="paper-title">Prior Selection for VAR Forecasts</h2>
-                    <a href="Prior_Selection_for_VAR_Forecasts.pdf" target="_blank" rel="noopener" class="paper-link">Draft</a>
-                    <p class="paper-description">I provide a systematic framework for enhancing prior selection in Bayesian VAR forecasts, overcoming limitations of the popular method by Giannone et al. (2015). This paper suggests employing Relative Entropy Prior Sensitivity, which alleviates these limitations and improves point forecast accuracy. These improvements are attributed to the shape of the likelihood.</p>
-                </article>
-            </section>
-        </main>
-    </div>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">Nayoung Lee</a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="cv-new.html" class="nav-link">CV</a></li>
+      <li><a href="research-new.html" class="nav-link active" aria-current="page">Research</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <aside class="sidebar"><img src="https://via.placeholder.com/180?text=Photo" alt="Profile" class="profile-img"></aside>
+    <main class="main-content research-page">
+      <h1 class="research-heading">Working Paper</h1>
+      <article class="paper-item">
+        <h2 class="paper-title">Fiscal Beliefs and the Effectiveness of Fiscal Consolidation</h2>
+        <p class="paper-status">Draft coming soon</p>
+        <p class="paper-description">This paper studies how households' beliefs about fiscal policy shape the macroeconomic effects of fiscal consolidation.</p>
+      </article>
+      <article class="paper-item">
+        <h2 class="paper-title">Prior Selection for VAR Forecasts</h2>
+        <a href="Prior_Selection_for_VAR_Forecasts.pdf" target="_blank" rel="noopener" class="paper-link">Draft</a>
+        <p class="paper-description">I provide a systematic framework for enhancing prior selection in Bayesian VAR forecasts, overcoming limitations of the popular method by Giannone et al. (2015). This paper suggests employing Relative Entropy Prior Sensitivity, which alleviates these limitations and improves point forecast accuracy. These improvements are attributed to the shape of the likelihood.</p>
+      </article>
+    </main>
+  </div>
 </body>
 </html>
